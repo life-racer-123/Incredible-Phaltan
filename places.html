@@ -2,11 +2,22 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#grad1 {
-height: 45px;
-background-color: red;
-background-image: linear-gradient(to right,black,yellow,pink);
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 h1{
    text-align: center;
    color:white ;
@@ -183,7 +194,7 @@ function showSlides(n) {
 }
 </script>
 <body>
-<div id='grad1'>
+<div>
  <h1>Incredible Phaltan</h1>
 </div>
  <ul>
