@@ -5,11 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-#grad1 {
-height: 45px;
-background-color: red;
-background-image: linear-gradient(to right,black,yellow,pink);
-}
+
 h1{
    text-align: center;
    color:white ;
@@ -68,11 +64,21 @@ h2{
   }
 }
 body {
-  height: 200px;
-  background-color: green;
-  background-image: linear-gradient(to bottom,red,pink,black);
-  font-family: cursive;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 
 .glow {
   font-size: 20px;
