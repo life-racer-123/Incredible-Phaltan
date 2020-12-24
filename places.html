@@ -1,0 +1,248 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#grad1 {
+height: 45px;
+background-color: red;
+background-image: linear-gradient(to right,black,yellow,pink);
+}
+h1{
+   text-align: center;
+   color:white ;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background-image: 
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: Red;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: ; /* Should be removed. Only for demonstration */
+}
+h2{
+   text-align: center;
+   color: pink;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+</style>
+</head>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<body>
+<div id='grad1'>
+ <h1>Incredible Phaltan</h1>
+</div>
+ <ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="#">Places</a></li>
+  <li><a href="pic.html">Photo Gallary</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/ram-mandir.jpg" style="width:100%">
+  <div class="text">Ram Mandir</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Phaltan-Rajwada.jpg" style="width:100%">
+  <div class="text">Rajwada</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/waterfall.jpg" style="width:100%">
+  <div class="text">Dhumalwadi Waterfall</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<div class="row">
+<div class="column">
+<h2>Dhumalwadi Waterfall</h2>
+<h3>Each village has something unique to offer. Dhumalwadi is a one day picnic spot.  Go on Phaltan Girvi Road towards Girvi. Cross Nirgudi, Dhudhebavi, before Girvi the left turn to Dhumalwadi. Enter Dhumalwadi from a small Ghat. The scenery immediately changes from village to beautiful greenery. Park vehicles in village keep going inside the hills. The small road goes through the small river, water flow. No need to climb on hills. You will keep going till the waterfall. The route to waterfall from dhumalwadi was very scenic in rainy season only, giving you wonderful views all along the way. You have to no need to climb to reach the main view. You will be able to see the fall. The walk is short. So, the best time would be right in the middle of the monsoon. There are actually more than two falls. Visible from the view point. One can get a frontal view of the main fall. You have to continue in the same direction for another 100 Meters until you reach the hill/mountain, where the road seems to end. If you proceed further you will read to Kund. Overall, it was a very good one day trip covering two waterfalls and trekking and drive up to phaltan.</h3>
+</div>
+<div class="column">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15189.389913580593!2d74.47183507878627!3d17.86919855466357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e5c1ac0920a6aae!2sDhumalwadi%20Waterfall%20Small!5e0!3m2!1sen!2sin!4v1608342465879!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+ 
+</div>
+<div class="row">
+<div class="column">
+<h2>Ram Mandir</h2>
+<h3>Shri Ram is the local deity (Gram-daivat) of the city, and the Sri Ram Temple in Phaltan is an important landmark in the city. There is a Temple of lord shiva, which is called as Jabreshwar Mandir, this temple has stone carvings. There are many Jain temples in Phaltan. People of Mahanubhav panth identify Phaltan as South Kashi. The city has a mosque called Badshahi Masjid. A village named Rajale is home for an ancient temple of goddess Janai. In the month of November or December, the annual fair will be celebrated which is called as Shri Ram Rathostav. The idols of Lord Sri Ram and Sita made up of five metals (Panchdhatu) are placed in a decorated rath worshipped and is taken on a procession all over the city, this procession is called as Nagar pradakshina.</h3>
+</div>
+<div class="column">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.7427119917597!2d74.42762071488495!3d17.990703387719716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3a5381d2c6c41%3A0xfd18daf7a8c23ea5!2sSri%20Ram%20Mandir!5e0!3m2!1sen!2sin!4v1608343142222!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+ 
+</div>
+</body>
+</html>
